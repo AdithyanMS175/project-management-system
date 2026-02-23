@@ -58,7 +58,7 @@ const Register = () => {
             const result = await registerAPI(formData);
 
             if (result.status === 201 || result.status === 200) {
-               alert("Registered Successfully");
+                alert("Registered Successfully");
 
                 setFormData({
                     name: "",
@@ -140,6 +140,15 @@ const Register = () => {
                         {loading ? "Registering..." : "Register"}
                     </button>
 
+                    <p className="text-center mt-3">
+                        Already a user?{" "}
+                        <span
+                            style={{ color: "blue", cursor: "pointer" }}
+                            onClick={() => navigate("/")}
+                        >
+                            Go to Login
+                        </span>
+                    </p>
                 </form>
             </div>
 

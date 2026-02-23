@@ -19,6 +19,12 @@ export const getProjectsAPI = async (page, reqHeader) => {
     return await commonAPI("GET",`${serverURL}/projects?page=${page}`,{},reqHeader);
 };
 
+// admin: delete user
+export const deleteProjectAPI = async (projectId, reqHeader) => {
+    return await commonAPI("DELETE", `${serverURL}/projects/${projectId}`, {}, reqHeader);
+};
+
+
 // admin: fetch all users
 export const getUsersAPI = async (reqHeader) => {
     return await commonAPI("GET", `${serverURL}/users`, {}, reqHeader);

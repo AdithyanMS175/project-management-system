@@ -63,7 +63,7 @@ const Login = () => {
             console.log(error);
 
             if (error.response.status === 401) {
-            alert("Incorrect Credentials");
+                alert("Incorrect Credentials");
             } else if (error.response?.status === 404) {
                 alert("Account does not exist");
             } else {
@@ -115,6 +115,14 @@ const Login = () => {
                         disabled={loading}
                     >
                         {loading ? "Logging in..." : "Login"}
+                    </button>
+
+                    <button
+                        type="button"
+                        className="btn btn-outline-secondary w-100 mt-2"
+                        onClick={() => navigate("/register")}
+                    >
+                        Go to Register
                     </button>
 
                 </form>
