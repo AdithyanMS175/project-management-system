@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import TaskItem from "../components/TaskItem";
 import {
@@ -95,7 +95,7 @@ const ProjectDetails = () => {
 
       <div className="container mt-4">
         <h3>Project Tasks</h3>
-
+        <Link className="btn btn-secondary" to={'/dashboard'}>Back To Home</Link>
         <div className="mb-3">
           <label className="form-label">Project Status</label>
           <select
